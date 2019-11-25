@@ -14,6 +14,11 @@ Clone the project and run the following to open the project:
 make open
 ```
 
+Read the pull requests explaining the steps to move the project onward:
+
+1. [The Basics](https://github.com/dirtyhenry/scaffold-ios/pull/1);
+1. [A Login Massive View Controller](https://github.com/dirtyhenry/scaffold-ios/pull/2).
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
