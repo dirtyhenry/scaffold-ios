@@ -19,8 +19,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var login: UIButton!
     
+    weak var extraView: UIView?
+    
     override func viewDidLoad() {
+        debugPrint("viewDidLoad")
         super.viewDidLoad()
+        view.backgroundColor = .lightGray
     }
     
     @IBAction func handleLogin(_ sender: Any) {
@@ -58,6 +62,46 @@ class ViewController: UIViewController {
                 self.present(alert, animated: true)
             }
         }.resume()
+        
+        // Add some view dynamically
+        let anotherSubview2 = MyView(frame: .zero)
+        anotherSubview2.translatesAutoresizingMaskIntoConstraints = false
+        anotherSubview2.backgroundColor = .red
+        view.addSubview(anotherSubview2)
+
+        extraView?.removeFromSuperview()
+        let anotherSubview = MyView(frame: .zero)
+        anotherSubview.translatesAutoresizingMaskIntoConstraints = false
+        anotherSubview.backgroundColor = .white
+        view.addSubview(anotherSubview)
+        extraView = anotherSubview
+        anotherSubview.layer.anchorPoint = CGPoint(x: 0.5, y: 0.0)
+        anotherSubview.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+
+        NSLayoutConstraint.activate([
+            anotherSubview2.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8.0),
+            anotherSubview2.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8.0),
+            anotherSubview2.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8.0),
+            anotherSubview2.heightAnchor.constraint(equalToConstant: 256.0),
+
+            anotherSubview.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8.0),
+            anotherSubview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8.0),
+            anotherSubview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8.0),
+            anotherSubview.heightAnchor.constraint(equalToConstant: 256.0)
+        ])
+    }
+    
+    override func updateViewConstraints() {
+        debugPrint("updateViewConstraints \(view.frame) \(extraView?.frame)")
+        super.updateViewConstraints()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        debugPrint("viewWillLayoutSubviews \(view.frame) \(extraView?.frame)")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        debugPrint("viewDidLayoutSubviews \(view.frame) \(extraView?.frame)")
     }
 }
 
