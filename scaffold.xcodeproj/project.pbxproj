@@ -35,7 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00556D8D238C060B002A54DE /* scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000A445723FB01CE00F1893C /* ConfigProject.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigProject.xcconfig; sourceTree = "<group>"; };
+		000A445923FB03A300F1893C /* ConfigTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigTarget.xcconfig; sourceTree = "<group>"; };
+		00556D8D238C060B002A54DE /* Target Build Settings Name.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Target Build Settings Name.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00556D90238C060B002A54DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00556D92238C060B002A54DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		00556D94238C060B002A54DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,8 @@
 		00556D84238C060B002A54DE = {
 			isa = PBXGroup;
 			children = (
+				000A445923FB03A300F1893C /* ConfigTarget.xcconfig */,
+				000A445723FB01CE00F1893C /* ConfigProject.xcconfig */,
 				00556D8F238C060B002A54DE /* scaffold */,
 				00556DA6238C060D002A54DE /* scaffoldTests */,
 				00556DB1238C060D002A54DE /* scaffoldUITests */,
@@ -89,7 +93,7 @@
 		00556D8E238C060B002A54DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00556D8D238C060B002A54DE /* scaffold.app */,
+				00556D8D238C060B002A54DE /* Target Build Settings Name.app */,
 				00556DA3238C060D002A54DE /* scaffoldTests.xctest */,
 				00556DAE238C060D002A54DE /* scaffoldUITests.xctest */,
 			);
@@ -145,7 +149,7 @@
 			);
 			name = scaffold;
 			productName = scaffold;
-			productReference = 00556D8D238C060B002A54DE /* scaffold.app */;
+			productReference = 00556D8D238C060B002A54DE /* Target Build Settings Name.app */;
 			productType = "com.apple.product-type.application";
 		};
 		00556DA2238C060D002A54DE /* scaffoldTests */ = {
@@ -318,6 +322,7 @@
 /* Begin XCBuildConfiguration section */
 		00556DB5238C060D002A54DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000A445723FB01CE00F1893C /* ConfigProject.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -370,6 +375,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Project Build Settings Name";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -423,6 +429,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Project Build Settings Name";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -432,6 +439,7 @@
 		};
 		00556DB8238C060D002A54DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 000A445923FB03A300F1893C /* ConfigTarget.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,7 +450,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.mickf.scaffold;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Target Build Settings Name";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,7 +468,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.mickf.scaffold;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Target Build Settings Name";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
