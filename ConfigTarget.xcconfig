@@ -1,1 +1,1 @@
-// PRODUCT_NAME = "Target Config"
+PRODUCT_NAME = B $(inherited)

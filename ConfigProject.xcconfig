@@ -1,1 +1,1 @@
-PRODUCT_NAME = "Project Config"
+PRODUCT_NAME = D $(inherited)
