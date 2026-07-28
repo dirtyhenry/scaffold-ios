@@ -7,7 +7,7 @@
   "author": "Mickaël Floc’hlay <mick@mickf.net>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.20.3",
+    "body-parser": "^1.20.6",
     "express": "^4.20.0"
   }
 }
